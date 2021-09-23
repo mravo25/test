@@ -21,7 +21,7 @@ function Pin({ coordinates, index }: PinProps): React.ReactElement {
         src={pin}
         alt="pin"
       />
-      {index && (
+      {index !== undefined && (
         <h1
           style={{
             position: "absolute",
@@ -29,7 +29,7 @@ function Pin({ coordinates, index }: PinProps): React.ReactElement {
             left: coordinates.x,
           }}
         >
-          {index}
+          {index + 1}
         </h1>
       )}
     </React.Fragment>
